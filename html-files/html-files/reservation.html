@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="ru" xml:lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="keywords"
+	content="театр, театр кукол, криворожский театр кукол, городской театр кукол, кукольный тектр кривой рог, театр кукол кривой рог, кукольные спектакли в кривом роге" />
+<meta name="description" content="" />
+<title>Бронування квитків</title>
+<link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico" />
+<link rel="stylesheet" type="text/css" href="../../styles.css" />
+<link rel="stylesheet" type="text/css" href="../../reservation.css" />
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../url.min.js"></script>
+<script type="text/javascript" src="../../imgshow.jquery.js"></script>
+<script type="text/javascript">
+	sfHover = function() {
+		var sfEls = document.getElementById("nav").getElementsByTagName("LI");
+		for ( var i = 0; i < sfEls.length; i++) {
+			sfEls[i].onmouseover = function() {
+				this.className += " sfhover";
+			};
+			sfEls[i].onmouseout = function() {
+				this.className = this.className.replace(new RegExp(
+						" sfhover\\b"), "");
+			}
+		}
+	};
+	if (window.attachEvent)
+		window.attachEvent("onload", sfHover);
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#default').imgShow();
+		$('#speed').imgShow({
+			showPanel : 'none',
+			timeShow : 1000,
+			speedShow : 300,
+			speedHide : 300
+		});
+		$('#no3').imgShow({
+			showPanel : 'always',
+			speedShow : 300,
+			speedHide : 300
+		});
+		$('#slowtext').imgShow({
+			speedShowDesc : 1000,
+			speedHideDesc : 1000
+		});
+	})
+</script>
+<script type="text/javascript" src="../../reservation.js"></script>
+<script src="../../config.js"></script>
+</head>
+<body>
+	<div
+		style="margin: auto; width: 758px; border-right-color: black; border-left-color: black; border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid">
+		<div
+			style="border: 1px solid #9b0606; width: 756px; height: 22px; line-height: 22px; background-image: url('../../images/topbarmain.gif'); background-repeat: repeat-x"
+			class="toptext" align="right">
+			<span style="color: white"></span> |<a class="toptext"
+				href="../../sitemap.php"><img border="0"
+				alt="Карта сайта, оглавление" src="../../images/topbtn.jpg" />
+				Карта сайту</a> |
+		</div>
+		<a style="top: 0px; position: absolute; z-index: 100" href="../../"><img
+			style="width: 80px; height: 80px" border="0"
+			alt="Криворожский театр кукол" src="../../images/logo.png" /></a>
+		<div
+			style="width: 758px; height: 250px; border-top-color: black; border-bottom-color: white; border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid">
+			<div id="slowtext">
+				<img alt="" src="../../images/0.jpg" /><img alt=""
+					src="../../images/1.jpg" /><img alt="" src="../../images/2.jpg" /><img
+					alt="" src="../../images/3.jpg" /><img alt=""
+					src="../../images/4.jpg" />
+			</div>
+		</div>
+		<div
+			style="width: 758px; height: 30px; background-image: url('../../images/navbar.png')">
+			<ul style="left: 10px; top: 8px; position: relative" id="nav"
+				class="div-navbarlinks">
+				<li><a title="Новини" href="../../">Новини</a></li>
+				<li><a title="Афіша" href="../../afisha.php"><img
+						border="0" alt="" width="9" height="10"
+						src="../../images/arrow.png" /> Афіша</a></li>
+				<li><a title="Про театр" href="../../about.php"><img
+						border="0" alt="" width="9" height="10"
+						src="../../images/arrow.png" /> Про театр</a></li>
+				<li><a title="Галерея" href="../../gallery.php"><img
+						border="0" alt="" width="9" height="10"
+						src="../../images/arrow.png" /> Галерея</a></li>
+				<li><a title="Контактні дані" href="../../contacts.html"><img
+						border="0" alt="" width="9" height="10"
+						src="../../images/arrow.png" /> Контактні дані</a></li>
+			</ul>
+		</div>
+		<div id="common-container">
+			<div class="reservation-container">
+				<h2 class="title-spectacles"></h2>
+				<img class="imgTipLeft" alt="Витівки братця кролика"
+					src="../../images/Afisha/bratec_krolik.jpg" width="190">
+					<div class="hall-container">
+						<p align="center" class="floorplan">
+						<strong>Схема залу</strong></p>
+						<p class="scene">Сцена</p>
+						<div class="table-container-div" align="center">
+							<table class="table-container">
+							</table>
+						</div>
+						<div class="information">
+							<div>
+								Кількість місць: <input class="input-seats" type="text"
+									name="input-seats" readonly>
+							</div>
+							<div>
+								Вартість замовлення: <input class="input-order-value"
+									type="text" name="input-order-value" readonly> грн. 
+							</div>
+							<div class="order">
+								<button class="input-order"></>Замовити</button>
+							</div>
+							<div class="one">
+								Вартість одного квитка: дорослого <input type="text"
+									name="input-order-value-adult" class="input-order-value-adult"
+									value="12" readonly> грн., дитячого <input type="text"
+									name="input-order-value-children"
+									class="input-order-value-children" value="10" readonly> грн. 
+							</div>
+						</div>
+						<div class="adult-children-block adult-children-none">
+							<div class="choice-wrapper">
+								<div class="choice">
+									<form name="choice" action="" method="get">
+										<b>Оберіть вид квитка:</b>
+										<br> <select class="select-choice" name="select-choice">
+												<option value="" england>
+													...
+													<option class="option-adult" value="12">
+														Дорослий
+														<option class="option-children" value="10">Дитячий
+														<option class="option-cancel" value="0">Відмінити вибір
+										</select>
+									</form>
+								</div>
+							</div>
+							<div class="bg-select"></div>
+						</div>
+						<div
+							class="withdrawal-order-container-block withdrawal-order-container-none">
+							<div class="withdrawal-order-wrapper">
+								<div class="withdrawal-orderr">
+									<div>
+										<form action="" method="post" class="form-order">
+											<div class=order-open>
+												Номер броні : <input class="reservation-number" type="text"
+													name="reservation-number" readonly>
+											</div>
+											<div class="seats">
+												Кількість місць: <input class="input-seats" type="text"
+													name="input-seats" readonly>
+											</div>
+											<div class="order-value">
+												Вартість замовлення: <input class="input-order-value"
+													type="text" name="input-order-value" readonly>
+											</div>
+											<div>
+											<div class="fio-align"> ФІО:</div><input class="input-fio-text" type="text"
+													name="name" value=""></div>
+											<div>
+												Додати коментар:
+												<textarea class="textarea-comment-text" rows="5" cols="25"
+													name="body"></textarea>
+											</div>
+										</form>
+										<input class="input-confirm-order" type="submit"
+										value="Підтвердити замовлення">
+									</div>
+								</div>
+								<div class="withdrawal-close withdrawal-close-none">x</div>
+							</div>
+							<div class="bg-select"></div>
+						</div>
+						<div
+							class="message-server-block message-server-none">
+							<div class="message-server-wrapper">
+								<div class="message-server">
+								</div>
+								<input class="input-ok" type="button" value="OK">
+							</div>
+							<div class="bg-select"></div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div
+		style="margin: auto; width: 758px; height: 29px; position: relative; background-image: url('../../images/footer.png'); display: table;"
+		id="footer">
+		<table class="footerlinks2" border="0" cellspacing="0" cellpadding="0"
+			width="90%" align="center">
+			<tbody>
+				<tr>
+					<td style="vertical-align: middle" nowrap="" align="left">
+						Генеральний спонсор: компанія &laquo;<a title="Белый Ветер"
+						href="">Білий Вітер</a> &raquo;
+					</td>
+					<td align="right">Розробка сайту:<a title="Белый Ветер"
+						href="">wwind.ua</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

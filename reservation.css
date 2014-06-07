@@ -1,0 +1,236 @@
+#common-container {
+	background-color: white;
+	width: 728px;
+	position: relative;
+	padding: 15px;
+}
+
+.hall-container {
+	position: relative;
+	display: inline-block;
+	width: 72%;
+	z-index: 1;
+}
+
+.selected-information {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+}
+
+.imgTipLeft {
+	position: relative;
+	display: inline-block;
+	width: 26.5%;
+}
+
+.reservation-container {
+	width: 100%;
+}
+
+.title-spectacles {
+	text-align: center;
+}
+
+.hall-spectacle {
+	position: relative;
+	float: right;
+	width: 520px;
+}
+
+.floorplan {
+	text-align: center;
+	margin: 0px 0px 5px 0px;
+	font-size: 16px;
+}
+
+.scene {
+	text-align: center;
+	margin: 0px 0px 5px 0px;
+	background-color: #EEEEEE;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	color: #8D8D8D;
+	font-size: 13px;
+}
+
+.img-spectacle {
+	margin-right: 5px;
+	margin-top: 4px;
+	float: left;
+	border-color: #C0C0C0;
+	border-width: 1px;
+}
+
+.table-container-div {
+	position: relative;
+	width: 100%;
+	margin: 0px 0px 5px 0px;
+}
+
+.table-container {
+	width: 80%;
+}
+
+.information>div {
+	margin: 0px 0px 5px 0px;
+}
+
+.td-number-rows {
+	background-color: white;
+	width: 35px;
+	height: 20px;
+	text-align: center;
+	font-size: 10px;
+}
+
+.td-seats {
+	background-color: #105bcc;
+	width: 20px;
+	height: 20px;
+	color: white;
+	text-align: center;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.selected {
+	background-color: #60d469;
+}
+
+.reserved {
+	background-color: #f8356c;
+}
+
+.input-seats,.reservation-number,.input-order-value-adult,.input-order-value-children {
+	width: 15px;
+	height: 15px;
+	text-align: center;
+}
+
+.input-order-value-adult,.input-order-value-children,.one {
+	font-size: 10px;
+}
+
+.input-order-value {
+	width: 25px;
+	height: 15px;
+	text-align: center;
+}
+
+.reservation-number {
+	width: 65px;
+	height: 15px;
+	text-align: center;
+}
+
+.information {
+	text-align: center;
+}
+
+.withdrawal-order-container-none,.message-server-none,.adult-children-none,.withdrawal-close-none
+	{
+	display: none;
+}
+
+.withdrawal-order-container-block,.adult-children-block,.message-server-block
+	{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	z-index: 3;
+}
+
+.bg-select {
+	background: #000;
+	opacity: 0.3;
+	-ms-filter: "progid:DXImageTransform.Microsoft. Alpha(Opacity=30)";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.withdrawal-order-wrapper,.choice-wrapper,.message-server-wrapper {
+	position: relative;
+	vertical-align: middle;
+	z-index: 2;
+	width: 100%;
+	box-shadow: 2px 2px 0 #C2C2C2;
+	border-radius: 10px;
+	padding: 12px;
+	width: 20%;
+}
+
+.withdrawal-order-wrapper,.choice-wrapper {
+	background-color: white;
+}
+
+.withdrawal-order-wrapper {
+	top: 15%;
+	left: 40%;
+}
+
+.choice-wrapper {
+	top: 30%;
+	left: 40%;
+	padding-bottom: 50px;
+}
+
+.message-server-wrapper {
+	top: 35%;
+	left: 40%;
+	background-color: #daf9ec;
+}
+
+.withdrawal-orderr,.choice,.message-server {
+	position: relative;
+	display: inline-block;
+}
+
+.message-server {
+	margin: 0 0 5px 0;
+}
+
+.input-fio-text,.textarea-comment-text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin: 5px 0;
+	padding: 3px;
+}
+
+.fio-align {
+	float: left;
+	margin: 5px 0;
+	padding: 3px;
+}
+
+.input-order,.input-confirm-order {
+	font-size: 15px;
+	font-weigft: bold;
+	background-color: blue;
+	color: white;
+}
+
+.withdrawal-close {
+	color: black;
+	background: white;
+	font-size: 20px;;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.form-order>div {
+	margin: 0 0 5px;
+}
