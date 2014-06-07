@@ -106,9 +106,9 @@ $(document).ready(function() {
 		if ($('.input-fio-text').val() !== "") {
 			var formParameters = {
 					'reservation-number':$('.reservation-number').val(),
+					'input-fio-text':$('.input-fio-text').val(),
 					'number-row':numberRow,
 					'number-seat':currentLocationDivText,
-					'input-fio-text':$('.input-fio-text').val(),
 					'textarea-comment-text':$('.textarea-comment-text').val()
 				};
 			$.post( '../../save-reservation.php', formParameters, function( data ) {
@@ -124,7 +124,7 @@ $(document).ready(function() {
 		}
 		else {
 			event.preventDefault();
-			window.alert("Поле ФІО обов'язкове до заповнення");
+			window.alert("Поле ПІО обов'язкове до заповнення");
 		}
 	});
 });
