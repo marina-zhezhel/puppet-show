@@ -124,7 +124,7 @@ $(document).ready(function() {
 		}
 		else {
 			event.preventDefault();
-			window.alert("Поле ПІО обов'язкове до заповнення");
+			window.alert("Поле ПІБ обов'язкове до заповнення");
 		}
 	});
 });
