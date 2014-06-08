@@ -102,7 +102,6 @@ $(document).ready(function() {
 		}
 	});
 	$( '.input-confirm-order' ).click(function( event ) {
-		//debugger;
 		if ($('.input-fio-text').val() !== "") {
 			var formParameters = {
 					'reservation-number':$('.reservation-number').val(),
@@ -111,8 +110,7 @@ $(document).ready(function() {
 					'number-seat':currentLocationDivText,
 					'textarea-comment-text':$('.textarea-comment-text').val()
 				};
-			$.post( '../../save-reservation.php', formParameters, function( data ) {
-				
+			$.get( '../../save-reservation.php', formParameters, function( data ) {
 				var answer2=JSON.parse(data);
 				$('.withdrawal-order-container-block').addClass('withdrawal-order-container-none');
 				$('.message-server').text(answer2['1']['message']);
