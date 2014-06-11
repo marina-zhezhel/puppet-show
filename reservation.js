@@ -41,15 +41,12 @@ $(document).ready(function() {
 				tr.append(td);
 			}
 		}
-		$('.td-seats:not(.reserved, .td-number-rows,)').click(function(){
-			$('.bg-select').addClass('background-select');
+		$('.td-seats:not(.reserved, .td-number-rows)').click(function(){
 			$('.select-choice').val('...');
 			if (!($(this).hasClass('selected'))) {
 				$('.input-seats').val(index+1);
 				index+=1;
 				}
-			else {
-			}
 			$(this).addClass('selected');
 			currentLocation=this;
 			currentLocationDiv=($(this).children()[0]);
@@ -66,16 +63,27 @@ $(document).ready(function() {
 			inputOrderVal = inputOrderVal ? inputOrderVal : 0;
 			var currentСellVal = parseInt(currentСell.val(), 10);
 			currentСellVal = currentСellVal ? currentСellVal : 0;
-			inputOrder.val(
-			    inputOrderVal 
-                + parseInt($(this).val(),10) 
-                - currentСellVal
-            );
+			if (inputOrderVal===0) {
+				inputOrder.val(
+				    2 
+	                + parseInt($(this).val(),10) 
+	            );
+			}
+			else {
+				inputOrder.val(
+					    inputOrderVal 
+		                + parseInt($(this).val(),10) 
+		                - currentСellVal
+		            );
+			}
 			currentСell.val($(this).val());
 			if ($(this).val()==="0") {
 				$(currentLocation).removeClass('selected');
 				$('.input-seats').val(index-1);
 				index-=1;
+			}
+			if (($('.input-seats').val())==="0") {
+				inputOrder.val(0);
 			}
 			$('.adult-children-block').addClass('adult-children-none');
 		});
@@ -117,6 +125,13 @@ $(document).ready(function() {
 				$('.message-server-block').removeClass('message-server-none');
 				$( '.input-ok' ).click(function( event ) {
 					$('.message-server-block').addClass('message-server-none');
+					var selectedSeats = $('.selected');
+					selectedSeats.addClass('reserved');
+					selectedSeats.removeClass('selected');
+					$('.input-order-value').val(0);
+					$('.input-seats').val(0);
+					index=0;
+					$('.reserved').unbind('click');
 				});
 			});
 		}

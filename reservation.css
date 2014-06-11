@@ -102,17 +102,18 @@
 	background-color: #f8356c;
 }
 
-.input-seats,.reservation-number,.input-order-value-adult,.input-order-value-children {
+.input-order-value-adult,.input-order-value-children, .input-order-value-one {
 	width: 15px;
 	height: 15px;
 	text-align: center;
-}
-
-.input-order-value-adult,.input-order-value-children,.one {
 	font-size: 10px;
 }
 
-.input-order-value {
+.one {
+	font-size: 10px;
+}
+
+.reservation-number, .input-order-value, .input-seats {
 	width: 25px;
 	height: 15px;
 	text-align: center;
